@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+double somar(double num_a, double num_b) {
+    return num_a + num_b;
+}
+
+double subtrair(double num_a, double num_b) {
+    return num_a - num_b;
+}
+
+double multiplicar(double num_a, double num_b) {
+    return num_a * num_b;
+}
+
+double dividir(double num_a, double num_b) {
+    return num_a / num_b;
+}
+
+int main() {
+    double num_1, num_2;
+    int operacao;
+    double resultado;
+
+    printf("Digite um número: ");
+    scanf("%lf", &num_1);
+
+    printf("Digite um número: ");
+    scanf("%lf", &num_2);
+    
+    printf("Selecione a operação:\n");
+    printf("1 - Somar (+)\n");
+    printf("2 - Subtrair (-)\n");
+    printf("3 - Multiplicar (*)\n");
+    printf("4 - Dividir (/)\n");
+    printf("Digite o número da operação (1 a 4): ");
+    scanf("%d", &operacao);
+
+//switch só pode ser usado em string, char e números inteiros.
+//
+
+    switch (operacao) {
+        case 1:
+            resultado = somar(num_1, num_2);
+            break;
+        case 2:
+            resultado = subtrair(num_1, num_2);
+            break;
+        case 3:
+            resultado = multiplicar(num_1, num_2);
+            break;
+        case 4:
+            resultado = dividir(num_1, num_2);
+            break;
+        default:
+            printf("Opção Inválida\n");
+    }
+
+    printf("Resultado: %.2lf\n", resultado);
+    
+    return 0;
+}
