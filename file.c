@@ -10,7 +10,7 @@ int main() {
         return 1;
     }
 
-    fprintf(arquivo, "Olá Arquivo!!!\n");
+    fprintf(arquivo, "Olá Daiana!!!\n");
 
     fclose(arquivo);
     
